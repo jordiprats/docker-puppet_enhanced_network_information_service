@@ -70,5 +70,6 @@ COPY jetty.ini /etc/puppetlabs/puppetdb/conf.d/jetty.ini
 
 
 EXPOSE 8080
+EXPOSE 8081
 
 CMD /bin/bash /usr/local/bin/runme.sh
