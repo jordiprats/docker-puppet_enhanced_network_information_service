@@ -48,7 +48,7 @@ services:
       timeout: 10s
       retries: 5
   puppetmaster:
-    image: eyp/enhancedpupppetmaster:5
+    image: eyp/pupppetmaster:5
     build: ./puppetmaster5
     restart: always
     depends_on:
