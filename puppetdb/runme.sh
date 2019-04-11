@@ -62,7 +62,7 @@ echo "FQDN: ${FQDN}"
 ln -s /etc/puppetlabs/puppet/ssl/private_keys/puppetdb.pm5.docker.pem /etc/puppetlabs/puppet/ssl/private_keys/${FQDN}.pem
 ln -s /etc/puppetlabs/puppet/ssl/certs/puppetdb.pm5.docker.pem /etc/puppetlabs/puppet/ssl/certs/${FQDN}.pem
 
-ln -s /etc/puppetlabs/puppet/ssl /etc/puppetlabs/puppetdb/ssl
+ln -s /etc/puppetlabs/puppet/ssl/* /etc/puppetlabs/puppetdb/ssl
 
 puppetdb ssl-setup -f
 
