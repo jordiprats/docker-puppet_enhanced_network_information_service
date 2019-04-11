@@ -7,7 +7,7 @@ services:
     volumes:
       - puppetdb-data:/tmp/puppetdb
       - ./puppet-ssl:/etc/puppetlabs/puppet/ssl:rw
-      - ./puppetdb-ssl:/etc/puppetlabs/puppet/ssl:rw
+      - ./puppetdb-ssl:/etc/puppetlabs/puppetdb/ssl:rw
     networks:
       pm5net:
         aliases:
@@ -30,7 +30,7 @@ services:
         condition: service_healthy
     volumes:
       - ./puppet-ssl:/etc/puppetlabs/puppet/ssl:rw
-      - ./puppetdb-ssl:/etc/puppetlabs/puppet/ssl:rw
+      - ./puppetdb-ssl:/etc/puppetlabs/puppetdb/ssl:rw
     networks:
       pm5net:
         aliases:
