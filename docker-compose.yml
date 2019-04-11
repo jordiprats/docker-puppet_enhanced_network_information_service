@@ -40,7 +40,7 @@ services:
       PUPPETDB_KEY: /etc/puppetlabs/puppet/ssl/private.pem
       PUPPETDB_CERT: /etc/puppetlabs/puppet/ssl/public.pem
       INVENTORY_FACTS: 'Hostname,fqdn, IP Address,ipaddress'
-      ENABLE_CATALOG: True
+      ENABLE_CATALOG: 'True'
       GRAPH_FACTS: 'architecture,puppetversion,osfamily'
     healthcheck:
       test: ["CMD", "/bin/true"]
