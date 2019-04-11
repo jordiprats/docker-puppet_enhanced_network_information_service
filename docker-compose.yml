@@ -25,6 +25,9 @@ services:
     image: voxpupuli/puppetboard
     build: puppetboard
     restart: always
+    depends_on:
+      puppetdb:
+        condition: service_healthy
     volumes:
       - ./puppet-ssl:/etc/puppetlabs/puppet/ssl:rw
       - ./puppetdb-ssl:/etc/puppetlabs/puppet/ssl:rw
