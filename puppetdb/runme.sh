@@ -64,6 +64,8 @@ ln -s /etc/puppetlabs/puppet/ssl/certs/puppetdb.pm5.docker.pem /etc/puppetlabs/p
 
 puppetdb ssl-setup -f
 
+cp /etc/puppetlabs/puppetdb/ssl/ca.pem /etc/puppetlabs/puppet/ssl/puppetdb-ca.pem
+
 #
 # puppetDB start
 #
