@@ -37,8 +37,8 @@ services:
     environment:
       PUPPETDB_HOST: puppetdb.pm5.docker
       PUPPETDB_PORT: 8081
-      PUPPETDB_SSL_VERIFY: /etc/puppetlabs/puppetdb/ssl/puppetdb-ca.pem
-      PUPPETDB_KEY: /etc/puppetlabs/puppetdb/ssl/private.pem 
+      PUPPETDB_SSL_VERIFY: /etc/puppetlabs/puppet/ssl/puppetdb-ca.pem
+      PUPPETDB_KEY: /etc/puppetlabs/puppet/ssl/private_keys/puppetdb.pm5.docker.pem
       PUPPETDB_CERT: /etc/puppetlabs/puppet/ssl/certs/puppetdb-container.pem 
       INVENTORY_FACTS: 'Hostname,fqdn, IP Address,ipaddress'
       ENABLE_CATALOG: 'True'
