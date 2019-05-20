@@ -21,8 +21,8 @@ services:
       timeout: 10s
       retries: 5
   puppetboard:
-    image: voxpupuli/puppetboard
-    build: puppetboard
+    image: eyp/voxpopuli-puppetboard
+    build: puppetpanel
     restart: always
     depends_on:
       puppetdb:
@@ -39,7 +39,7 @@ services:
       PUPPETDB_PORT: 8081
       PUPPETDB_SSL_VERIFY: /etc/puppetlabs/puppet/ssl/puppetdb-ca.pem
       PUPPETDB_KEY: /etc/puppetlabs/puppet/ssl/private_keys/puppetdb.pm5.docker.pem
-      PUPPETDB_CERT: /etc/puppetlabs/puppet/ssl/certs/puppetdb-container.pem 
+      PUPPETDB_CERT: /etc/puppetlabs/puppet/ssl/certs/puppetdb-container.pem
       INVENTORY_FACTS: 'Hostname,fqdn, IP Address,ipaddress'
       ENABLE_CATALOG: 'True'
       GRAPH_FACTS: 'architecture,puppetversion,osfamily'
